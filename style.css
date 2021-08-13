@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive ;
+}
+#container{
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(143, 29, 86);
+   position: relative;
+}
+
+button{
+   display: flex;
+   position: absolute;
+   width: 120px;
+   height: 40px;
+   background-color: #fff;
+   border: none;
+   border-radius: 10px;
+   font-weight: bold;
+   font-size: 20px;
+   align-items: center;
+   justify-content: space-evenly;
+   cursor: pointer;
+} 
+
+ i{
+   color: rgb(143, 29, 86);
+   font-size: 25px;
+ }
+ button:focus .bi-cursor-fill{
+   animation: move 0.7s linear forwards;
+   color: #fff;
+}
+
+@keyframes move{
+   20%{
+    transform: translateY(-40px) translateX(70px) rotate(20deg);
+   }
+   40%{
+    transform: translateY(-30px) translateX(100px) rotate(80deg);
+   }
+   60%{
+    transform: translateY(10px) translateX(130px) rotate(140deg);
+   }
+   80%{
+    transform: translateY(50px) translateX(100px) rotate(200deg);
+   }
+   90%{
+    transform: translateY(50px) translateX(50px) rotate(240deg);
+    opacity: 1; 
+   }
+   100%{
+    transform: translateY(50px) translateX(30px) rotate(270deg); 
+    opacity: 0;
+   }
+}
+
+button:focus{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.3s 0.7s;
+}
+button:focus>span{
+  transform: scale(0);
+  transition: all 0.2s 0.7s;
+}
+.bi-check-lg{
+  transform: scale(0);
+}
+button:focus ~ .bi-check-lg{
+  transform: scale(1);
+  transition: all 0.4s 0.7s;
+}
+
+
